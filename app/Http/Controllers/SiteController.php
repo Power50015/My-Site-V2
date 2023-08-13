@@ -90,7 +90,7 @@ class SiteController extends Controller
                 "PortfolioTitle" => $PortfolioTitle["value"],
                 "PortfolioDescription" => $PortfolioDescription["value"],
                 "PortfolioSubTitle" => $PortfolioSubTitle["value"],
-                "Projects" => Project::all(),
+                "Projects" => Project::orderBy('date', 'desc')->get(),
                 "StatisticItem1Title" => $StatisticItem1Title["value"],
                 "StatisticItem1Number" => $StatisticItem1Number["value"],
                 "StatisticItem2Title" => $StatisticItem2Title["value"],
