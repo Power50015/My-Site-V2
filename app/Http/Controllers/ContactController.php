@@ -5,7 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Http\Requests\StoreContactRequest;
 use App\Http\Requests\UpdateContactRequest;
+use App\Mail\ConfirmMail;
 use App\Models\Template;
+use Illuminate\Support\Facades\Mail;
+
+
 
 class ContactController extends Controller
 {
@@ -33,13 +37,23 @@ class ContactController extends Controller
      */
     public function store(StoreContactRequest $request)
     {
-        Contact::create([
+        $data = Contact::create([
             "name" => $request->firstn,
             "email" => $request->email,
             "phone" => $request->phone,
             "subject" => $request->subject,
             "message" => $request->message,
         ]);
+
+        $mailData = [
+            "name" => $data->name,
+            "email" => $data->email,
+            "phone" => $data->phone,
+            "subject" => $data->subject,
+            "messagex" => $data->message,
+        ];
+        
+        Mail::to("ma@mohamed-ashamallah.com")->send(new ConfirmMail($mailData));
 
         return redirect()->route('thankYou');
     }
