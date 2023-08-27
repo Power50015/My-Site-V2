@@ -17,7 +17,7 @@
             @forelse ($Companies as $company)
             <div class="col-xl-2">
                 <div class="single-brand">
-                    <img src="{{ url('public/Image/' . $company->image) }}" alt="img">
+                    <img src="{{ url('public/Image/' . $company->image) }}" alt="img" class="px-3" height="50">
                 </div>
             </div>
             @empty
