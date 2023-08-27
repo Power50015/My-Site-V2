@@ -14,7 +14,7 @@ class AwardController extends Controller
     public function index()
     {
         return view(
-            'admin.Award',
+            'admin.award',
             ["awards" => Award::all()]
         );
     }
@@ -64,7 +64,7 @@ class AwardController extends Controller
     public function edit(Award $award)
     {
         return view(
-            'admin.Award',
+            'admin.award',
             [
                 "awards" => Award::all(),
                 "MyAward" => $award,

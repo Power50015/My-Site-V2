@@ -14,7 +14,7 @@ class CompanyController extends Controller
     public function index()
     {
         return view(
-            'admin.Company',
+            'admin.company',
             ["companies" => Company::all()]
         );
     }
@@ -59,7 +59,7 @@ class CompanyController extends Controller
     public function edit(Company $company)
     {
         return view(
-            'admin.Company',
+            'admin.company',
             [
                 "companies" => Company::all(),
                 "MyCompany" => $company

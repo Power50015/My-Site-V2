@@ -241,49 +241,55 @@
                                                 @csrf
                                                 <div class="mb-3">
                                                     <x-input-label for="LinkedIn" :value="__('LinkedIn Link')" class="form-label" />
-                                                    <x-text-input id="LinkedIn" class="form-control" type="text" name="LinkedIn" required autocomplete="LinkedIn" value="{{@isset($LinkedIn)?$LinkedIn:''}}" />
+                                                    <x-text-input id="LinkedIn" class="form-control" type="text" name="LinkedIn" autocomplete="LinkedIn" value="{{@isset($LinkedIn)?$LinkedIn:''}}" />
                                                     <x-input-error :messages="$errors->get('LinkedIn')" class="mt-2" />
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <x-input-label for="GitHub" :value="__('GitHub Link')" class="form-label" />
-                                                    <x-text-input id="GitHub" class="form-control" type="text" name="GitHub" required autocomplete="GitHub" value="{{@isset($GitHub)?$GitHub:''}}" />
+                                                    <x-text-input id="GitHub" class="form-control" type="text" name="GitHub" autocomplete="GitHub" value="{{@isset($GitHub)?$GitHub:''}}" />
                                                     <x-input-error :messages="$errors->get('GitHub')" class="mt-2" />
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <x-input-label for="Bitbucket" :value="__('Bitbucket Link')" class="form-label" />
-                                                    <x-text-input id="Bitbucket" class="form-control" type="text" name="Bitbucket" required autocomplete="Bitbucket" value="{{@isset($Bitbucket)?$Bitbucket:''}}" />
+                                                    <x-text-input id="Bitbucket" class="form-control" type="text" name="Bitbucket" autocomplete="Bitbucket" value="{{@isset($Bitbucket)?$Bitbucket:''}}" />
                                                     <x-input-error :messages="$errors->get('Bitbucket')" class="mt-2" />
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <x-input-label for="CodePen" :value="__('CodePen Link')" class="form-label" />
-                                                    <x-text-input id="CodePen" class="form-control" type="text" name="CodePen" required autocomplete="CodePen" value="{{@isset($CodePen)?$CodePen:''}}" />
+                                                    <x-text-input id="CodePen" class="form-control" type="text" name="CodePen" autocomplete="CodePen" value="{{@isset($CodePen)?$CodePen:''}}" />
                                                     <x-input-error :messages="$errors->get('CodePen')" class="mt-2" />
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <x-input-label for="Codewars" :value="__('Codewars Link')" class="form-label" />
+                                                    <x-text-input id="Codewars" class="form-control" type="text" name="Codewars" autocomplete="Codewars" value="{{@isset($Codewars)?$Codewars:''}}" />
+                                                    <x-input-error :messages="$errors->get('Codewars')" class="mt-2" />
                                                 </div>
                                                 
                                                 <div class="mb-3">
                                                     <x-input-label for="Blog" :value="__('Blog Link')" class="form-label" />
-                                                    <x-text-input id="Blog" class="form-control" type="text" name="Blog" required autocomplete="Blog" value="{{@isset($Blog)?$Blog:''}}" />
+                                                    <x-text-input id="Blog" class="form-control" type="text" name="Blog" autocomplete="Blog" value="{{@isset($Blog)?$Blog:''}}" />
                                                     <x-input-error :messages="$errors->get('Blog')" class="mt-2" />
                                                 </div>
                                                 
                                                 <div class="mb-3">
                                                     <x-input-label for="YouTube" :value="__('YouTube Link')" class="form-label" />
-                                                    <x-text-input id="YouTube" class="form-control" type="text" name="YouTube" required autocomplete="YouTube" value="{{@isset($YouTube)?$YouTube:''}}" />
+                                                    <x-text-input id="YouTube" class="form-control" type="text" name="YouTube" autocomplete="YouTube" value="{{@isset($YouTube)?$YouTube:''}}" />
                                                     <x-input-error :messages="$errors->get('YouTube')" class="mt-2" />
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <x-input-label for="WhatsApp" :value="__('WhatsApp Link')" class="form-label" />
-                                                    <x-text-input id="WhatsApp" class="form-control" type="text" name="WhatsApp" required autocomplete="WhatsApp" value="{{@isset($WhatsApp)?$WhatsApp:''}}" />
+                                                    <x-text-input id="WhatsApp" class="form-control" type="text" name="WhatsApp" autocomplete="WhatsApp" value="{{@isset($WhatsApp)?$WhatsApp:''}}" />
                                                     <x-input-error :messages="$errors->get('WhatsApp')" class="mt-2" />
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <x-input-label for="Telegram" :value="__('Telegram Link')" class="form-label" />
-                                                    <x-text-input id="Telegram" class="form-control" type="text" name="Telegram" required autocomplete="Telegram" value="{{@isset($Telegram)?$Telegram:''}}" />
+                                                    <x-text-input id="Telegram" class="form-control" type="text" name="Telegram" autocomplete="Telegram" value="{{@isset($Telegram)?$Telegram:''}}" />
                                                     <x-input-error :messages="$errors->get('Telegram')" class="mt-2" />
                                                 </div>
                                                 <button type="submit" class="btn btn-lg btn-primary waves-effect waves-light w-100">Save</button>

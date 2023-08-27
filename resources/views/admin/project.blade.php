@@ -42,7 +42,7 @@
                         <div class="card-body">
                             <div>{!!$project->small_description!!}</div>
                             <div class="d-flex justify-content-between">
-                                <a href="#" class="card-link">View</a>
+                                <a href="/project/{{$project->id}}" class="card-link">View</a>
                                 <a href="{{route('project.edit',$project->id)}}" class="card-link text-success">Edit</a>
                                 <a href="javascript:void(0);"
                                 class="card-link text-danger"

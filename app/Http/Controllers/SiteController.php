@@ -22,6 +22,7 @@ class SiteController extends Controller
         $HomeImage = Template::where('name', 'HomeImage')->first();
         $HomeBackground = Template::where('name', 'HomeBackground')->first();
         $CV = Template::where('name', 'CV')->first();
+        $Codewars = Template::where('name', 'Codewars')->first();
         $ServiceTitle1 = Template::where('name', 'ServiceItem' . 1 . 'Title')->first();
         $ServiceShortDescription1 = Template::where('name', 'ServiceItem' . 1 . 'ShortDescription')->first();
         $ServiceDescription1 = Template::where('name', 'ServiceItem' . 1 . 'Description')->first();
@@ -72,6 +73,7 @@ class SiteController extends Controller
                 "HomeImage" => $HomeImage["value"],
                 "HomeBackground" => $HomeBackground["value"],
                 "CV" => $CV["value"],
+                "Codewars" => $Codewars["value"],
                 "ServiceTitle1" => $ServiceTitle1["value"],
                 "ServiceShortDescription1" => $ServiceShortDescription1["value"],
                 "ServiceDescription1" => $ServiceDescription1["value"],

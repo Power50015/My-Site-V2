@@ -34,6 +34,11 @@
                                             <x-text-input id="PortfolioTitle" class="form-control" type="text" name="PortfolioTitle" required autocomplete="PortfolioTitle" value="{{@isset($PortfolioTitle)?$PortfolioTitle:''}}" />
                                             <x-input-error :messages="$errors->get('PortfolioTitle')" class="mt-2" />
                                         </div>
+                                        <div class="mb-3">
+                                            <x-input-label for="PortfolioSubTitle" :value="__('Portfolio Sub Title')" class="form-label" />
+                                            <x-text-input id="PortfolioSubTitle" class="form-control" type="text" name="PortfolioSubTitle" required autocomplete="PortfolioSubTitle" value="{{@isset($PortfolioSubTitle)?$PortfolioSubTitle:''}}" />
+                                            <x-input-error :messages="$errors->get('PortfolioSubTitle')" class="mt-2" />
+                                        </div>
                                         <div class="col-12 mt-3">
                                             <x-input-label :value="__('Portfolio Description')" class="form-label" />
                                             <div id="snow-editor" style="height: 300px;">

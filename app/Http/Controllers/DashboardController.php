@@ -57,6 +57,8 @@ class DashboardController extends Controller
         $Telegram = Template::where('name', 'Telegram')->first();
         $Telegram = $Telegram["value"];
 
+        $Codewars = Template::where('name', 'Codewars')->first();
+        $Codewars = $Codewars["value"];
         return view(
             'dashboard',
             compact(
@@ -77,6 +79,7 @@ class DashboardController extends Controller
                     'YouTube',
                     'WhatsApp',
                     'Telegram',
+                    'Codewars'
                 ]
             )
         );
@@ -216,6 +219,16 @@ class DashboardController extends Controller
             $Telegram = Template::where('name', 'Telegram')->first();
             $Telegram['value'] = null;
             $Telegram->save();
+        }
+
+        if (!empty($request->Codewars)) {
+            $Codewars = Template::where('name', 'Codewars')->first();
+            $Codewars['value'] = $request->Codewars;
+            $Codewars->save();
+        } else {
+            $Codewars = Template::where('name', 'Codewars')->first();
+            $Codewars['value'] = null;
+            $Codewars->save();
         }
 
         return redirect()->route('dashboard')->with('success', 'Links updated!');;

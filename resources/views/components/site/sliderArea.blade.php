@@ -11,12 +11,19 @@
                         <div class="slider-content s-slider-content mt-100 p-relative">
                             <h5 data-animation="fadeInUp" data-delay=".3s">
                                 <span>
-                                    <img src="{{ asset('site/img/bg/cube.png') }}" alt="icon01"></span> {{$HomeJob}}
+                                    <img src="{{ asset('site/img/bg/cube.png') }}" alt="icon01">
+                                </span>
+                                {{$HomeJob}}
                             </h5>
                             <h2 data-animation="fadeInUp" data-delay=".6s">{{$HomeTitle}}</h2>
                             <div class="slider-btn mb-105">
                                 <a href="{{url('public/Image/'.$CV)}}" class="btn ss-btn mr-15" data-animation="fadeInUp" data-delay=".9s" download>Download CV </a>
                             </div>
+                            @isset($Codewars)
+                            <div class="slider-btn mb-105">
+                                <a href="{{$Codewars}}" class="btn ss-btn mr-15" data-animation="fadeInUp" data-delay=".9s">CodeWars</a>
+                            </div>
+                            @endisset
 
                         </div>
                     </div>

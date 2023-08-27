@@ -62,6 +62,11 @@
                                                         <x-input-error :messages="$errors->get('link')" class="mt-2" />
                                                     </div>
                                                     <div class="col-12 mt-3">
+                                                        <x-input-label for="codeLink" :value="__('Code Link')" class="form-label" />
+                                                        <x-text-input id="codeLink" class="form-control" type="text" name="codeLink" autocomplete="codeLink" value="{{@isset($project->codeLink)?$project->codeLink:''}}" />
+                                                        <x-input-error :messages="$errors->get('codeLink')" class="mt-2" />
+                                                    </div>
+                                                    <div class="col-12 mt-3">
                                                         <x-input-label for="example-month" :value="__('Date')" class="form-label" />
                                                         <x-text-input class="form-control" id="example-month" type="date" name="date" value="{{@isset($project->date)? \Illuminate\Support\Carbon::parse($project->date)->format('Y-m-d') :''}}" />
                                                     </div>
