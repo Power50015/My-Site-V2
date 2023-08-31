@@ -30,9 +30,11 @@
                                         
                                     </div>
                                 </div>
-     
+    
                                 <div class="col-lg-6 text-right">
+                                     @if(!empty($story->client_logo))
                                     <img src="{{ url('public/Image/' . $story->client_logo) }}" alt="img">
+                                    @endif
                                 </div>
                                
                             </div>
