@@ -95,7 +95,7 @@ class ContactSectionController extends Controller
 
         if (!empty($request->ContactText)) {
             $ContactText = Template::where('name', 'ContactText')->first();
-            $ContactText['value'] = $request->ContactTitle;
+            $ContactText['value'] = $request->ContactText;
             $ContactText->save();
         } else {
             $ContactText = Template::where('name', 'ContactText')->first();

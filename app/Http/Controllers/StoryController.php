@@ -32,6 +32,8 @@ class StoryController extends Controller
      */
     public function store(StoreStoryRequest $request)
     {
+        $client_image = null;
+        $client_logo = null;
         if ($request->file('client_image')) {
             $file = $request->file('client_image');
             $filename = date('YmdHi') . $file->getClientOriginalName();

@@ -31,7 +31,7 @@
                     <h2>
                         {{$ContactTitle}}
                     </h2>
-                    <p>Above creature the rule blessed brought. Multiply they're one. Gathering own waters beast blessed.</p>
+                    <p>{!! $ContactText !!}</p>
                 </div>
 
                 <div class="contact-info pl-60">
@@ -43,23 +43,40 @@
             </div>
             <div class="col-lg-5 col-md-12 order-2">
                 <div class="contact-bg">
-                    <form action="{{ route('contact.store')}}" method="post" class="contact-form">
+                    <form action="{{ route('contact.store') }}" method="post" class="contact-form">
                         @csrf
                         <div class="row">
+                            <div class="col-12">
+                                @error('name')
+                                <div class="alert alert-danger">{{$errors->first('name')}}</div>
+                                @enderror
+                                @error('email')
+                                <div class="alert alert-danger">{{$errors->first('email')}}</div>
+                                @enderror
+                            </div>
                             <div class="col-lg-6">
                                 <div class="contact-field p-relative c-name mb-20">
+
                                     <i class="fas fa-user"></i>
-                                    <input type="text" id="firstn" name="firstn" placeholder="First Name" required>
+                                    <input type="text" id="name" name="name" placeholder="Name" required>
                                 </div>
                             </div>
-
                             <div class="col-lg-6">
                                 <div class="contact-field p-relative c-subject mb-20">
+
                                     <i class="fas fa-envelope-open"></i>
                                     <input type="text" id="email" name="email" placeholder="Eamil" required>
                                 </div>
                             </div>
 
+                            <div class="col-12">
+                                @error('phone')
+                                <div class="alert alert-danger">{{$errors->first('phone')}}</div>
+                                @enderror
+                                @error('subject')
+                                <div class="alert alert-danger">{{$errors->first('subject')}}</div>
+                                @enderror
+                            </div>
                             <div class="col-lg-6">
                                 <div class="contact-field p-relative c-subject mb-20">
                                     <i class="fas fa-phone"></i>
@@ -69,17 +86,22 @@
                             <div class="col-lg-6">
                                 <div class="contact-field p-relative c-subject mb-20">
                                     <i class="fas fa-book"></i>
-                                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
                                 </div>
                             </div>
 
+                            <div class="col-12">
+                                @error('message')
+                                <div class="alert alert-danger">{{$errors->first('message')}}</div>
+                                @enderror
+                            </div>
                             <div class="col-lg-12">
                                 <div class="contact-field p-relative c-message mb-30">
                                     <i class="fas fa-pencil"></i>
                                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Write comments"></textarea>
                                 </div>
                                 <div class="slider-btn">
-                                    <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Submit Request</button>
+                                    <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Send Message</button>
                                 </div>
                             </div>
                         </div>

@@ -22,11 +22,27 @@ class StoreContactRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'require',
-            'email' => 'require',
-            'phone' => 'require',
-            'subject' => 'require',
-            'message' => 'require',
+            'name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'subject' => 'required',
+            'message' => 'required',
+        ];
+    }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array<string, string>
+     */
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'A name is required',
+            'email.required' => 'A email is required',
+            'phone.required' => 'A phone is required',
+            'subject.required' => 'A subject is required',
+            'message.required' => 'A message is required',
         ];
     }
 }

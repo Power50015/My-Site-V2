@@ -38,7 +38,7 @@ class ContactController extends Controller
     public function store(StoreContactRequest $request)
     {
         $data = Contact::create([
-            "name" => $request->firstn,
+            "name" => $request->name,
             "email" => $request->email,
             "phone" => $request->phone,
             "subject" => $request->subject,
