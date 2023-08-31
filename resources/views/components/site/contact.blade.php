@@ -38,9 +38,6 @@
                     <div class="single-cta pb-30 mb-30 wow fadeInUp  animated" data-animation="fadeInDown animated" data-delay=".2s" style="visibility: visible; animation-name: fadeInUp;">
                         {!! $ContactAddress !!}
                     </div>
-                    <div class="single-cta pb-30 mb-30 wow fadeInUp  animated" data-animation="fadeInDown animated" data-delay=".2s" style="visibility: visible; animation-name: fadeInUp;">
-
-                    </div>
 
                 </div>
             </div>

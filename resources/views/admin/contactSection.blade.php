@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <x-input-label for="ContactVideo" :value="__('Contact Video')" class="form-label" />
-                                            <x-text-input id="ContactVideo" class="form-control" type="text" name="ContactVideo" required autocomplete="ContactVideo" value="{{@isset($ContactVideo)?$ContactVideo:''}}" />
+                                            <x-text-input id="ContactVideo" class="form-control" type="text" name="ContactVideo" autocomplete="ContactVideo" value="{{@isset($ContactVideo)?$ContactVideo:''}}" />
                                             <x-input-error :messages="$errors->get('ContactVideo')" class="mt-2" />
                                         </div>
                                         <div class="mb-3">

@@ -57,7 +57,7 @@ class SiteController extends Controller
         $AwardTitle = Template::where('name', 'AwardTitle')->first();
         $AwardSubTitle = Template::where('name', 'AwardSubTitle')->first();
         $ContactTitle = Template::where('name', 'ContactTitle')->first();
-        $ContactSubTitle = Template::where('name', 'ContactTitle')->first();
+        $ContactSubTitle = Template::where('name', 'ContactSubTitle')->first();
         $ContactVideo = Template::where('name', 'ContactVideo')->first();
         $ContactAddress = Template::where('name', 'ContactAddress')->first();
         $ContactText = Template::where('name', 'ContactText')->first();
