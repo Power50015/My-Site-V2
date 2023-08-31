@@ -18,18 +18,23 @@
                             <div class="row justify-content-center align-items-center">
                                 <div class="col-lg-6">
                                     <div class="about-user">
+                                        @if(!empty($story->client_image))
                                         <div class="img">
                                             <img src="{{ url('public/Image/' . $story->client_image) }}" alt="{{ $story->title }}">
                                         </div>
+                                        @endif
                                         <div class="text">
                                             <span>{{$story->client_job}}</span>
                                             <h5>{{$story->client_name}}</h5>
                                         </div>
+                                        
                                     </div>
                                 </div>
+     
                                 <div class="col-lg-6 text-right">
                                     <img src="{{ url('public/Image/' . $story->client_logo) }}" alt="img">
                                 </div>
+                               
                             </div>
                             <div class="row justify-content-center align-items-center mt-30 bdr">
                                 <div class="col-lg-8 pt-30">
@@ -37,11 +42,11 @@
                                         <ul>
                                             <li>
                                                 <span>{{$story->statisticTitle1}}</span>
-                                                <h3>{{$story->statisticNumber1}}</h3>
+                                                <h4>{{$story->statisticNumber1}}</h4>
                                             </li>
                                             <li>
                                                 <span>{{$story->statisticTitle2}}</span>
-                                                <h3>{{$story->statisticNumber2}}</h3>
+                                                <h4>{{$story->statisticNumber2}}</h4>
                                             </li>
                                         </ul>
                                     </div>
