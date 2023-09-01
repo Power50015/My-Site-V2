@@ -92,7 +92,7 @@ class SiteController extends Controller
                 "PortfolioTitle" => $PortfolioTitle["value"],
                 "PortfolioDescription" => $PortfolioDescription["value"],
                 "PortfolioSubTitle" => $PortfolioSubTitle["value"],
-                "Projects" => Project::orderBy('date', 'desc')->get(),
+                "Projects" => Project::orderBy('date', 'desc')->limit(6)->get(),
                 "StatisticItem1Title" => $StatisticItem1Title["value"],
                 "StatisticItem1Number" => $StatisticItem1Number["value"],
                 "StatisticItem2Title" => $StatisticItem2Title["value"],
@@ -129,7 +129,7 @@ class SiteController extends Controller
             'site.projects',
             [
                 "HomeBackground" => $HomeBackground["value"],
-                "Projects" => Project::all(),
+                "Projects" => Project::orderBy('date', 'desc')->get(),
             ]
         );
     }

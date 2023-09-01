@@ -80,10 +80,10 @@
                                     @if(!empty($project->link) || !empty($project->codeLink))
                                     <div class="slider-btn mt-30">
                                         @if(!empty($project->link))
-                                        <a href="{{ $project->link}}" class="btn ss-btn mr-15"><span>Live Preview</span> </a>
+                                        <a href="{{ $project->link}}" target="_blank" class="btn ss-btn mr-15"><span>Live Preview</span> </a>
                                         @endif
                                         @if(!empty($project->codeLink))
-                                        <a href="{{ $project->codeLink}}" class="btn ss-btn mr-15"><span>Code Preview</span> </a>
+                                        <a href="{{ $project->codeLink}}" target="_blank" class="btn ss-btn mr-15"><span>Code Preview</span> </a>
                                         @endif
                                     </div>
                                     @endif

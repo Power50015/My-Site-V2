@@ -16,14 +16,17 @@
                                 {{$HomeJob}}
                             </h5>
                             <h2 data-animation="fadeInUp" data-delay=".6s">{{$HomeTitle}}</h2>
-                            <div class="slider-btn mb-105">
-                                <a href="{{url('public/Image/'.$CV)}}" class="btn ss-btn mr-15" data-animation="fadeInUp" data-delay=".9s" download>Download CV </a>
-                            </div>
                             @isset($Codewars)
-                            <div class="slider-btn mb-105">
-                                <a href="{{$Codewars}}" class="btn ss-btn mr-15" data-animation="fadeInUp" data-delay=".9s">CodeWars</a>
+                            <div class="slider-btn">
+                                <a href="{{$Codewars}}" target="_blank" class="" data-animation="fadeInUp" data-delay=".9s">
+                                    <img src="https://www.codewars.com/users/Mohamed%20Ashamallah/badges/large" alt="">
+                                </a>
                             </div>
                             @endisset
+                            <br>
+                            <div class="slider-btn mb-105 mt-3">
+                                <a href="{{url('public/Image/'.$CV)}}" class="btn ss-btn mr-15" data-animation="fadeInUp" data-delay=".9s" download>Download CV </a>
+                            </div>
 
                         </div>
                     </div>

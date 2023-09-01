@@ -17,7 +17,7 @@ class ProjectController extends Controller
     {
         return view(
             'admin.project',
-            ["projects" => Project::all()]
+            ["projects" => Project::orderBy('date', 'desc')->get()]
         );
     }
 

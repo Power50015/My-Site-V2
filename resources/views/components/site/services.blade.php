@@ -10,7 +10,7 @@
                     </div>
                     <div class="second-services-content">
                         <h3><a href="{{route('service.show',1)}}">{{$ServiceTitle1}}</a></h3>
-                        <p>{{$ServiceShortDescription1}}</p>
+                        <p>{!!$ServiceShortDescription1!!}</p>
                         <a href="{{route('service.show',1)}}" class="readmore">{{$ServiceBtn1}}</a>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="second-services-content">
                         <h3><a href="{{route('service.show',2)}}">{{$ServiceTitle2}}</a></h3>
-                        <p>{{$ServiceShortDescription2}}</p>
+                        <p>{!!$ServiceShortDescription2!!}</p>
                         <a href="{{route('service.show',2)}}" class="readmore">{{$ServiceBtn2}}</a>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="second-services-content">
                         <h3><a href="{{route('service.show',3)}}">{{$ServiceTitle3}}</a></h3>
-                        <p>{{$ServiceShortDescription3}}</p>
+                        <p>{!!$ServiceShortDescription3!!}</p>
                         <a href="{{route('service.show',3)}}" class="readmore">{{$ServiceBtn3}}</a>
                     </div>
                 </div>

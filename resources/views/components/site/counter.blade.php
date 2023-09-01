@@ -6,7 +6,7 @@
                 <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                     <div class="counter p-relative">
                         <div class="img-icon"><img src="{{ asset('site/img/bg/cube.png') }}" alt="icon01"></div>
-                        <span class="count">{{$StatisticItem1Number}}</span>
+                        <span class="">{{$StatisticItem1Number}}</span>
                         <p>{{$StatisticItem1Title}}</p>
                         <div class="number">01</div>
                     </div>
@@ -16,7 +16,7 @@
                 <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                     <div class="counter p-relative">
                         <div class="img-icon"><img src="{{ asset('site/img/bg/cube.png') }}" alt="icon01"></div>
-                        <span class="count">{{$StatisticItem2Number}}</span>
+                        <span class="">{{$StatisticItem2Number}}</span>
                         <p>{{$StatisticItem2Title}}</p>
                         <div class="number">02</div>
                     </div>
@@ -26,7 +26,7 @@
                 <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                     <div class="counter p-relative">
                         <div class="img-icon"><img src="{{ asset('site/img/bg/cube.png') }}" alt="icon01"></div>
-                        <span class="count">{{$StatisticItem3Number}}</span>
+                        <span class="">{{$StatisticItem3Number}}</span>
                         <p>{{$StatisticItem3Title}}</p>
                         <div class="number">03</div>
                     </div>
@@ -36,7 +36,7 @@
                 <div class="single-counter wow fadeInUp animated" data-animation="fadeInDown animated" data-delay=".2s">
                     <div class="counter p-relative">
                         <div class="img-icon"><img src="{{ asset('site/img/bg/cube.png') }}" alt="icon01"></div>
-                        <span class="count">{{$StatisticItem4Number}}</span>
+                        <span class="">{{$StatisticItem4Number}}</span>
                         <p>{{$StatisticItem4Title}}</p>
                         <div class="number">04</div>
                     </div>

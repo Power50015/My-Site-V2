@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ config('app.name', 'Mohamed Ashamallah') }}</title>
-    <meta name="description" content="">
+    <meta name="description" content="Finding solutions to challenges and focused on customer satisfaction. Proven experience developing consumer-focused web sites using JavaScript and PHP. Experience building products for Web.
+I love to learn Software engineering, more standards for Programming, user experience, best practices, usability, and speed code. 
+Responding to challenges by designing and developing solutions and building web applications aligned to customer services. 
+Translating solutions into code.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Place favicon.ico in the root directory -->
@@ -63,8 +66,8 @@
                         <div class="col-xl-3 col-lg-3 text-right d-none d-lg-block">
                             <div class="header-social">
                                 <span>
-                                    <a href="{{$WhatsApp}}" title="Whatsapp"><i class="fab fa-whatsapp"></i> Whatsapp</a>
-                                    <a href="{{$Telegram}}" title="Telegram"><i class="fab fa-telegram"></i> Telegram</a>
+                                    <a href="{{$WhatsApp}}" target="_blank" title="Whatsapp"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                                    <a href="{{$Telegram}}" target="_blank" title="Telegram"><i class="fab fa-telegram"></i> Telegram</a>
                                 </span>
                                 <!--  /social media icon redux -->
                             </div>
@@ -95,10 +98,10 @@
                             {!! $FooterText !!}
                         </div>
                         <div class="footer-social mt-10 mb-120 wow fadeInDown  animated" data-animation="fadeInDown" data-delay=".4s">
-                            <a href="{{$LinkedIn}}"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="{{$GitHub}}"><i class="fab fa-github"></i></a>
-                            <a href="{{$Bitbucket}}"><i class="fab fa-bitbucket"></i></a>
-                            <a href="{{$CodePen}}"><i class="fab fa-codepen"></i></a>
+                            <a href="{{$LinkedIn}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="{{$GitHub}}" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="{{$Bitbucket}}" target="_blank"><i class="fab fa-bitbucket"></i></a>
+                            <a href="{{$CodePen}}" target="_blank"><i class="fab fa-codepen"></i></a>
                         </div>
 
                     </div>
@@ -119,12 +122,12 @@
                         <ul>
                             @if(!empty($Blog))
                             <li>
-                                <a href="{{$Blog}}">Blog</a>
+                                <a href="{{$Blog}}" target="_blank">Blog</a>
                             </li>
                             @endif
                             @if(!empty($YouTube))
                             <li>
-                                <a href="{{$YouTube}}">Youtube</a>
+                                <a href="{{$YouTube}}" target="_blank">Youtube</a>
                             </li>
                             @endif
                         </ul>

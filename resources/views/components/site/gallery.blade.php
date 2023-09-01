@@ -8,7 +8,8 @@
                         <h5>
                             <span>
                                 <img src="{{ asset('site/img/bg/cube.png') }}" alt="icon01">
-                            </span> {{$PortfolioSubTitle}}
+                            </span>
+                            {{$PortfolioSubTitle}}
                         </h5>
                         <h2>
                             {{$PortfolioTitle}}
