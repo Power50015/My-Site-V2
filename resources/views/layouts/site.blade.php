@@ -4,14 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ config('app.name', 'Mohamed Ashamallah') }}</title>
-    <meta name="description" content="Finding solutions to challenges and focused on customer satisfaction. Proven experience developing consumer-focused web sites using JavaScript and PHP. Experience building products for Web.
-I love to learn Software engineering, more standards for Programming, user experience, best practices, usability, and speed code. 
-Responding to challenges by designing and developing solutions and building web applications aligned to customer services. 
-Translating solutions into code.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('site/favicon_io/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('site/favicon_io/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('site/favicon_io/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('site/favicon_io/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('site/favicon_io/site.webmanifest') }}">
+    <meta content="Mohamed Ashamallah" name="author" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    @isset($MetaData)
+        {{ $MetaData }}
+    @endisset
+    
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('site/css/bootstrap.min.css') }}">

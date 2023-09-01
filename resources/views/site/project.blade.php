@@ -96,4 +96,16 @@
         <!--End Project Detail -->
     </main>
     <!-- main-area-end -->
+    <x-slot:MetaData>
+        <title>Mohamed Ashamallah - {{$project->name}}</title>
+        <meta name="description" content="{{$project->sub_title}}">
+
+        <meta property="og:title" content="Mohamed Ashamallah - {{$project->name}}" />
+        <meta property="og:image" content="{{ url('public/Image/' . $project->image) }}" />
+        <meta property="og:description" content="{{$project->sub_title}}" />
+        <meta property="og:url" content="https://mohamed-ashamallah.com/" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
+        <meta property="og:type" content="website" />
+        </x-slot>
 </x-site-layout>

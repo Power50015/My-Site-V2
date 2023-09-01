@@ -42,4 +42,22 @@
         <!-- service-details-area-end -->
     </main>
     <!-- main-area-end -->
+    <x-slot:MetaData>
+        <title>Mohamed Ashamallah - {{ $ServiceTitle }}</title>
+        <meta name="description" content="Finding solutions to challenges and focused on customer satisfaction. Proven experience developing consumer-focused web sites using JavaScript and PHP. Experience building products for Web.
+    I love to learn Software engineering, more standards for Programming, user experience, best practices, usability, and speed code. 
+    Responding to challenges by designing and developing solutions and building web applications aligned to customer services. 
+    Translating solutions into code.">
+
+        <meta property="og:title" content="Mohamed Ashamallah - {{ $ServiceTitle }}" />
+        <meta property="og:image" content="{{ url('public/Image/'.$HomeBackground) }}" />
+        <meta property="og:description" content="Finding solutions to challenges and focused on customer satisfaction. Proven experience developing consumer-focused web sites using JavaScript and PHP. Experience building products for Web.
+    I love to learn Software engineering, more standards for Programming, user experience, best practices, usability, and speed code. 
+    Responding to challenges by designing and developing solutions and building web applications aligned to customer services. 
+    Translating solutions into code." />
+        <meta property="og:url" content="https://mohamed-ashamallah.com/" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="627" />
+        <meta property="og:type" content="website" />
+        </x-slot>
 </x-site-layout>
