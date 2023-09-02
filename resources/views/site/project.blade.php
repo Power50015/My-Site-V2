@@ -2,7 +2,7 @@
     <!-- main-area -->
     <main>
         <!-- breadcrumb-area -->
-        <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/bg/bdrc-bg.png);">
+        <section class="breadcrumb-area d-flex align-items-center" style="background-image: url('{{ url('public/Image/'.$HomeBackground) }}'); ">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-12 col-lg-12">
