@@ -7,6 +7,7 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\ProjectSkill;
 use App\Models\Skill;
+use App\Models\Template;
 
 class ProjectController extends Controller
 {
@@ -15,9 +16,14 @@ class ProjectController extends Controller
      */
     public function index()
     {
+
         return view(
             'admin.project',
-            ["projects" => Project::orderBy('date', 'desc')->get()]
+            [
+                "projects" => Project::orderBy('date', 'desc')->get(),
+
+
+            ]
         );
     }
 
@@ -72,10 +78,14 @@ class ProjectController extends Controller
     public function show($project)
     {
         $projectSkills = ProjectSkill::where('project_id', $project)->pluck('skill_id')->toArray();
+        $HomeBackground = Template::where('name', 'HomeBackground')->first();
+        $HomeBackground = $HomeBackground["value"];
+
         return view(
             'site.project',
             [
                 "project" =>  Project::find($project),
+                "HomeBackground" => $HomeBackground,
                 "skills" => Skill::whereIn('id', $projectSkills)->get(),
             ]
         );
@@ -114,7 +124,7 @@ class ProjectController extends Controller
         $project["date"] = $request->date;
         $project["link"] = $request->link;
         $project["codeLink"] = $request->codeLink;
-        
+
         ProjectSkill::where('project_id', $project->id)->delete();
         if ($request->skills)
             foreach ($request->skills as $key => $value) {
